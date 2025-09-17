@@ -23,7 +23,6 @@ wheels/
 pip-wheel-metadata/
 share/python-wheels/
 *.egg-info/
-.installed.cfg
 *.egg
 MANIFEST
 
@@ -55,21 +54,29 @@ coverage.xml
 *.mo
 *.pot
 
-# Django stuff:
-*.log
-local_settings.py
+# Databases
 db.sqlite3
 db.sqlite3-journal
 
-# Flask stuff:
+# Logs
+*.log
+
+# Framework-specific
+## Django
+local_settings.py
+
+## Flask
 instance/
 .webassets-cache
 
-# Scrapy stuff:
+## Scrapy
 .scrapy
 
-# Sphinx documentation
+# Documentation
+## Sphinx documentation
 docs/_build/
+## mkdocs documentation
+/site
 
 # PyBuilder
 target/
@@ -110,15 +117,16 @@ ENV/
 env.bak/
 venv.bak/
 
-# Spyder project settings
+# Editor settings
+## VS Code
+.vscode/
+
+## Spyder project settings
 .spyderproject
 .spyproject
 
-# Rope project settings
+## Rope project settings
 .ropeproject
-
-# mkdocs documentation
-/site
 
 # mypy
 .mypy_cache/
@@ -128,5 +136,5 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
-# bat
+# Windows batch files
 *.bat
