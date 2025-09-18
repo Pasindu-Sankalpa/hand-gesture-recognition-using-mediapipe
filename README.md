@@ -1,6 +1,10 @@
 > **Note** > <br>I created a repository of model zoo for keypoint classification.
 > <br>→ [Kazuhito00/hand-keypoint-classification-model-zoo](https://github.com/Kazuhito00/hand-keypoint-classification-model-zoo)
 
+# code explanation
+
+https://youtu.be/a99p_fAr6e4?si=cD7zXLg_PtrejDQD
+
 # hand-gesture-recognition-using-mediapipe
 
 Estimate hand pose using MediaPipe(Python version).<br> This is a sample program that recognizes hand signs and finger gestures with a simple MLP using the detected key points.
@@ -129,7 +133,7 @@ Hand sign recognition and finger gesture recognition can add and change training
 
 #### 1.Learning data collection
 
-Press "k" to enter the mode to save key points（displayed as 「MODE:Logging Key Point」）<br>
+Press "k" to enter the mode to save key points (displayed as "MODE:Logging Key Point")<br>
 <img src="https://user-images.githubusercontent.com/37477845/102235423-aa6cb680-3f35-11eb-8ebd-5d823e211447.jpg" width="60%"><br><br>
 If you press "0" to "9", the key points will be added to "model/keypoint_classifier/keypoint.csv" as shown below.<br>
 1st column: Pressed number (used as class ID), 2nd and subsequent columns: Key point coordinates<br>
@@ -183,11 +187,12 @@ The model using "LSTM" is as follows. <br>Please change "use_lstm = False" to "T
 Here are some application examples.
 
 - [Control DJI Tello drone with Hand gestures](https://towardsdatascience.com/control-dji-tello-drone-with-hand-gestures-b76bd1d4644f)
-- [Classifying American Sign Language Alphabets on the OAK-D](https://www.cortic.ca/post/classifying-american-sign-language-alphabets-on-the-oak-d)
 
 # Reference
 
-- [MediaPipe](https://mediapipe.dev/)
+- [MediaPipe](https://github.com/google-ai-edge/mediapipe)
+- [MediaPipe Solutions](https://ai.google.dev/edge/mediapipe/solutions/guide)
+- [MediaPipe Legacy Solutions](https://github.com/google-ai-edge/mediapipe/tree/master/docs/solutions)
 - [Kazuhito00/mediapipe-python-sample](https://github.com/Kazuhito00/mediapipe-python-sample)
 
 # Author

@@ -10,7 +10,6 @@ from collections import deque
 import cv2 as cv
 import numpy as np
 import mediapipe as mp
-# https://ai.google.dev/edge/mediapipe/solutions/vision/hand_landmarker/python
 
 from utils import CvFpsCalc
 from model import KeyPointClassifier
@@ -33,6 +32,8 @@ def get_args():
     parser.add_argument("--max_num_hands",
                         help='max_num_hands', type=int, default=2)
 
+    parser.add_argument("--use_brect", type=bool, default=True)
+
     args = parser.parse_args()
 
     return args
@@ -50,7 +51,7 @@ def main():
     min_detection_confidence = args.min_detection_confidence
     min_tracking_confidence = args.min_tracking_confidence
 
-    use_brect = True
+    use_brect = args.use_brect
 
     # Camera preparation
     cap = cv.VideoCapture(cap_device)
@@ -186,11 +187,11 @@ def select_mode(key, mode):
     number = -1
     if 48 <= key <= 57:  # 0 ~ 9
         number = key - 48
-    if key == 110:  # n
+    if key == 106:  # j
         mode = 0
     if key == 107:  # k
         mode = 1
-    if key == 104:  # h
+    if key == 108:  # l
         mode = 2
     return number, mode
 
