@@ -160,7 +160,7 @@ def main():
                 most_common_fg_id = Counter(
                     finger_gesture_history).most_common()
 
-                # Drawing part
+                # Drawing part 1
                 debug_image = draw_bounding_rect(use_brect, debug_image, brect)
                 debug_image = draw_landmarks(debug_image, landmark_list)
                 debug_image = draw_info_text(
@@ -173,10 +173,11 @@ def main():
         else:
             point_history.append([0, 0])
 
+        # Drawing part 2
         debug_image = draw_point_history(debug_image, point_history)
         debug_image = draw_info(debug_image, fps, mode, number)
 
-        # Screen reflection
+        # Display image in a window
         cv.imshow('Hand Gesture Recognition', debug_image)
 
     cap.release()
